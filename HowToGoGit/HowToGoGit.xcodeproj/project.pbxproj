@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7372AD115F13DDB001F5DA5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7372AD015F13DDB001F5DA5 /* Cocoa.framework */; };
+		D7372ADB15F13DDB001F5DA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7372AD915F13DDB001F5DA5 /* InfoPlist.strings */; };
+		D7372ADD15F13DDB001F5DA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372ADC15F13DDB001F5DA5 /* main.m */; };
+		D7372AE115F13DDB001F5DA5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D7372ADF15F13DDB001F5DA5 /* Credits.rtf */; };
+		D7372AE415F13DDB001F5DA5 /* CSP_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AE315F13DDB001F5DA5 /* CSP_AppDelegate.m */; };
+		D7372AE715F13DDB001F5DA5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7372AE515F13DDB001F5DA5 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D7372ACC15F13DDB001F5DA5 /* HowToGoGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowToGoGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7372AD015F13DDB001F5DA5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D7372AD315F13DDB001F5DA5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D7372AD415F13DDB001F5DA5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D7372AD515F13DDB001F5DA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D7372AD815F13DDB001F5DA5 /* HowToGoGit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HowToGoGit-Info.plist"; sourceTree = "<group>"; };
+		D7372ADA15F13DDB001F5DA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D7372ADC15F13DDB001F5DA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7372ADE15F13DDB001F5DA5 /* HowToGoGit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HowToGoGit-Prefix.pch"; sourceTree = "<group>"; };
+		D7372AE015F13DDB001F5DA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D7372AE215F13DDB001F5DA5 /* CSP_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSP_AppDelegate.h; sourceTree = "<group>"; };
+		D7372AE315F13DDB001F5DA5 /* CSP_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSP_AppDelegate.m; sourceTree = "<group>"; };
+		D7372AE615F13DDB001F5DA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7372AC915F13DDB001F5DA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7372AD115F13DDB001F5DA5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7372AC115F13DDB001F5DA5 = {
+			isa = PBXGroup;
+			children = (
+				D7372AD615F13DDB001F5DA5 /* HowToGoGit */,
+				D7372ACF15F13DDB001F5DA5 /* Frameworks */,
+				D7372ACD15F13DDB001F5DA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7372ACD15F13DDB001F5DA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7372ACC15F13DDB001F5DA5 /* HowToGoGit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7372ACF15F13DDB001F5DA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7372AD015F13DDB001F5DA5 /* Cocoa.framework */,
+				D7372AD215F13DDB001F5DA5 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7372AD215F13DDB001F5DA5 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7372AD315F13DDB001F5DA5 /* AppKit.framework */,
+				D7372AD415F13DDB001F5DA5 /* CoreData.framework */,
+				D7372AD515F13DDB001F5DA5 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D7372AD615F13DDB001F5DA5 /* HowToGoGit */ = {
+			isa = PBXGroup;
+			children = (
+				D7372AE215F13DDB001F5DA5 /* CSP_AppDelegate.h */,
+				D7372AE315F13DDB001F5DA5 /* CSP_AppDelegate.m */,
+				D7372AE515F13DDB001F5DA5 /* MainMenu.xib */,
+				D7372AD715F13DDB001F5DA5 /* Supporting Files */,
+			);
+			path = HowToGoGit;
+			sourceTree = "<group>";
+		};
+		D7372AD715F13DDB001F5DA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7372AD815F13DDB001F5DA5 /* HowToGoGit-Info.plist */,
+				D7372AD915F13DDB001F5DA5 /* InfoPlist.strings */,
+				D7372ADC15F13DDB001F5DA5 /* main.m */,
+				D7372ADE15F13DDB001F5DA5 /* HowToGoGit-Prefix.pch */,
+				D7372ADF15F13DDB001F5DA5 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7372ACB15F13DDB001F5DA5 /* HowToGoGit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7372AEA15F13DDB001F5DA5 /* Build configuration list for PBXNativeTarget "HowToGoGit" */;
+			buildPhases = (
+				D7372AC815F13DDB001F5DA5 /* Sources */,
+				D7372AC915F13DDB001F5DA5 /* Frameworks */,
+				D7372ACA15F13DDB001F5DA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HowToGoGit;
+			productName = HowToGoGit;
+			productReference = D7372ACC15F13DDB001F5DA5 /* HowToGoGit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7372AC315F13DDB001F5DA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CSP_;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Thomas Dubiel";
+			};
+			buildConfigurationList = D7372AC615F13DDB001F5DA5 /* Build configuration list for PBXProject "HowToGoGit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D7372AC115F13DDB001F5DA5;
+			productRefGroup = D7372ACD15F13DDB001F5DA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7372ACB15F13DDB001F5DA5 /* HowToGoGit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7372ACA15F13DDB001F5DA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7372ADB15F13DDB001F5DA5 /* InfoPlist.strings in Resources */,
+				D7372AE115F13DDB001F5DA5 /* Credits.rtf in Resources */,
+				D7372AE715F13DDB001F5DA5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7372AC815F13DDB001F5DA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7372ADD15F13DDB001F5DA5 /* main.m in Sources */,
+				D7372AE415F13DDB001F5DA5 /* CSP_AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D7372AD915F13DDB001F5DA5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7372ADA15F13DDB001F5DA5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D7372ADF15F13DDB001F5DA5 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7372AE015F13DDB001F5DA5 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D7372AE515F13DDB001F5DA5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7372AE615F13DDB001F5DA5 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7372AE815F13DDB001F5DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D7372AE915F13DDB001F5DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D7372AEB15F13DDB001F5DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HowToGoGit/HowToGoGit-Prefix.pch";
+				INFOPLIST_FILE = "HowToGoGit/HowToGoGit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D7372AEC15F13DDB001F5DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HowToGoGit/HowToGoGit-Prefix.pch";
+				INFOPLIST_FILE = "HowToGoGit/HowToGoGit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7372AC615F13DDB001F5DA5 /* Build configuration list for PBXProject "HowToGoGit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7372AE815F13DDB001F5DA5 /* Debug */,
+				D7372AE915F13DDB001F5DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7372AEA15F13DDB001F5DA5 /* Build configuration list for PBXNativeTarget "HowToGoGit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7372AEB15F13DDB001F5DA5 /* Debug */,
+				D7372AEC15F13DDB001F5DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7372AC315F13DDB001F5DA5 /* Project object */;
+}
