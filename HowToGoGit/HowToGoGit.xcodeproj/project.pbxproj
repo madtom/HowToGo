@@ -13,6 +13,8 @@
 		D7372AE115F13DDB001F5DA5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D7372ADF15F13DDB001F5DA5 /* Credits.rtf */; };
 		D7372AE415F13DDB001F5DA5 /* CSP_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AE315F13DDB001F5DA5 /* CSP_AppDelegate.m */; };
 		D7372AE715F13DDB001F5DA5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7372AE515F13DDB001F5DA5 /* MainMenu.xib */; };
+		D7372AF515F13F01001F5DA5 /* CSP-ExtraCharges.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AF215F13F01001F5DA5 /* CSP-ExtraCharges.m */; };
+		D7372AF615F13F01001F5DA5 /* CSP-vehicleCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AF415F13F01001F5DA5 /* CSP-vehicleCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		D7372AE215F13DDB001F5DA5 /* CSP_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSP_AppDelegate.h; sourceTree = "<group>"; };
 		D7372AE315F13DDB001F5DA5 /* CSP_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSP_AppDelegate.m; sourceTree = "<group>"; };
 		D7372AE615F13DDB001F5DA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D7372AF115F13F01001F5DA5 /* CSP-ExtraCharges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CSP-ExtraCharges.h"; sourceTree = "<group>"; };
+		D7372AF215F13F01001F5DA5 /* CSP-ExtraCharges.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CSP-ExtraCharges.m"; sourceTree = "<group>"; };
+		D7372AF315F13F01001F5DA5 /* CSP-vehicleCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CSP-vehicleCalculator.h"; sourceTree = "<group>"; };
+		D7372AF415F13F01001F5DA5 /* CSP-vehicleCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CSP-vehicleCalculator.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +88,8 @@
 		D7372AD615F13DDB001F5DA5 /* HowToGoGit */ = {
 			isa = PBXGroup;
 			children = (
-				D7372AE215F13DDB001F5DA5 /* CSP_AppDelegate.h */,
-				D7372AE315F13DDB001F5DA5 /* CSP_AppDelegate.m */,
-				D7372AE515F13DDB001F5DA5 /* MainMenu.xib */,
+				D7372AF815F13F1F001F5DA5 /* Ressources */,
+				D7372AF715F13F0E001F5DA5 /* Classes */,
 				D7372AD715F13DDB001F5DA5 /* Supporting Files */,
 			);
 			path = HowToGoGit;
@@ -100,6 +105,27 @@
 				D7372ADF15F13DDB001F5DA5 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7372AF715F13F0E001F5DA5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D7372AE215F13DDB001F5DA5 /* CSP_AppDelegate.h */,
+				D7372AE315F13DDB001F5DA5 /* CSP_AppDelegate.m */,
+				D7372AF115F13F01001F5DA5 /* CSP-ExtraCharges.h */,
+				D7372AF215F13F01001F5DA5 /* CSP-ExtraCharges.m */,
+				D7372AF315F13F01001F5DA5 /* CSP-vehicleCalculator.h */,
+				D7372AF415F13F01001F5DA5 /* CSP-vehicleCalculator.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D7372AF815F13F1F001F5DA5 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				D7372AE515F13DDB001F5DA5 /* MainMenu.xib */,
+			);
+			name = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +195,8 @@
 			files = (
 				D7372ADD15F13DDB001F5DA5 /* main.m in Sources */,
 				D7372AE415F13DDB001F5DA5 /* CSP_AppDelegate.m in Sources */,
+				D7372AF515F13F01001F5DA5 /* CSP-ExtraCharges.m in Sources */,
+				D7372AF615F13F01001F5DA5 /* CSP-vehicleCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
