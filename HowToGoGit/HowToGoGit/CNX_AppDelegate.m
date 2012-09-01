@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Thomas Dubiel. All rights reserved.
 //
 
-#import "CSP_AppDelegate.h"
+#import "CNX_AppDelegate.h"
 
-@implementation CSP_AppDelegate
+@implementation CNX_AppDelegate
 
 @synthesize kaufpreis;
 @synthesize kmProJahr;
@@ -53,7 +53,7 @@
         charges = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
     }
     else {
-        charges = [CSP_ExtraCharges new];
+        charges = [CNX_ExtraCharges new];
     }
     
     // fill view with class variables

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CSP-ExtraCharges.h"
+#import "CNX_ExtraCharges.h"
 
-@interface CSP_vehicleCalculator : NSObject {
+@interface CNX_vehicleCalculator : NSObject {
     
     // Instanzvariablen
     double ticketPrice;
@@ -23,6 +23,6 @@
 @property (assign) double ticketPrice, fuelPrice, everageFuelConsumption, distance;
 @property (readonly) double fuelConsumption;
 
--(double)calcFare:(BOOL)considerCharges withCharges:(CSP_ExtraCharges *)charges;
+-(double)calcFare:(BOOL)considerCharges withCharges:(CNX_ExtraCharges *)charges;
 
 @end

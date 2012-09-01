@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Thomas Dubiel. All rights reserved.
 //
 
-#import "CSP-ExtraCharges.h"
+#import "CNX_ExtraCharges.h"
 
-@implementation CSP_ExtraCharges
+@implementation CNX_ExtraCharges
 
 @synthesize lifeTime, milagePerAnno, milageLife, deprication, chargesPerKM, sumCharges;
 @synthesize insurance, tax, carPrice, service;

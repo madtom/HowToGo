@@ -7,10 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "CSP-ExtraCharges.h"
+#import "CNX_ExtraCharges.h"
 
-@interface CSP_AppDelegate : NSObject <NSApplicationDelegate> {
-    CSP_ExtraCharges *charges;
+@interface CNX_AppDelegate : NSObject <NSApplicationDelegate> {
+    CNX_ExtraCharges *charges;
 }
 
 @property (assign) IBOutlet NSWindow *window;

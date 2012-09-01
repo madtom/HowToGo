@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Thomas Dubiel. All rights reserved.
 //
 
-#import "CSP-vehicleCalculator.h"
+#import "CNX_vehicleCalculator.h"
 
-@implementation CSP_vehicleCalculator
+@implementation CNX_vehicleCalculator
 
 @synthesize ticketPrice, fuelPrice, everageFuelConsumption, distance;
 @synthesize fuelConsumption;
@@ -17,11 +17,11 @@
     return self.everageFuelConsumption * self.distance / 100;
 }
 
--(double)calcFare:(BOOL)considerCharges withCharges:(CSP_ExtraCharges *)charges {
+-(double)calcFare:(BOOL)considerCharges withCharges:(CNX_ExtraCharges *)charges {
     
     if (considerCharges == YES) {
         
-        CSP_ExtraCharges *charges = [[CSP_ExtraCharges alloc] init];
+        CNX_ExtraCharges *charges = [[CNX_ExtraCharges alloc] init];
         
         return self.fuelConsumption * self.fuelPrice + ( ( charges.chargesPerKM + charges.deprication ) * self.distance );
     }

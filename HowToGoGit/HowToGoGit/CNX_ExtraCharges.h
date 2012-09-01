@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CSP_ExtraCharges : NSObject <NSCoding> {
+@interface CNX_ExtraCharges : NSObject <NSCoding> {
     
     // Instanzvariablen
     double carPrice;
