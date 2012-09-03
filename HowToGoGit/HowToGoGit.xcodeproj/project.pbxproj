@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D715921115F545A0002CC464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372ADC15F13DDB001F5DA5 /* main.m */; };
-		D715921215F545A0002CC464 /* CNX_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AE315F13DDB001F5DA5 /* CNX_AppDelegate.m */; };
-		D715921315F545A0002CC464 /* CNX_ExtraCharges.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AF215F13F01001F5DA5 /* CNX_ExtraCharges.m */; };
-		D715921415F545A0002CC464 /* CNX_vehicleCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AF415F13F01001F5DA5 /* CNX_vehicleCalculator.m */; };
-		D715921615F545A0002CC464 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7372AD015F13DDB001F5DA5 /* Cocoa.framework */; };
-		D715921815F545A0002CC464 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7372AD915F13DDB001F5DA5 /* InfoPlist.strings */; };
-		D715921915F545A0002CC464 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D7372ADF15F13DDB001F5DA5 /* Credits.rtf */; };
-		D715921A15F545A0002CC464 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7372AE515F13DDB001F5DA5 /* MainMenu.xib */; };
-		D715921B15F545A0002CC464 /* HowToGoGit.icns in Resources */ = {isa = PBXBuildFile; fileRef = D7BADC5515F52AAD0051A1C5 /* HowToGoGit.icns */; };
 		D7372AD115F13DDB001F5DA5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7372AD015F13DDB001F5DA5 /* Cocoa.framework */; };
 		D7372ADB15F13DDB001F5DA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7372AD915F13DDB001F5DA5 /* InfoPlist.strings */; };
 		D7372ADD15F13DDB001F5DA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372ADC15F13DDB001F5DA5 /* main.m */; };
@@ -28,9 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D715921F15F545A0002CC464 /* How2Go Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How2Go Release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D715922115F545A0002CC464 /* HowToGoGit Debug copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HowToGoGit Debug copy-Info.plist"; sourceTree = "<group>"; };
-		D7372ACC15F13DDB001F5DA5 /* HowToGoGit Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HowToGoGit Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7372ACC15F13DDB001F5DA5 /* How2Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = How2Go.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7372AD015F13DDB001F5DA5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D7372AD315F13DDB001F5DA5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D7372AD415F13DDB001F5DA5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -49,17 +39,10 @@
 		D7372AF415F13F01001F5DA5 /* CNX_vehicleCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNX_vehicleCalculator.m; sourceTree = "<group>"; };
 		D75BA74715F543600097451A /* How2Go copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "How2Go copy-Info.plist"; path = "/Users/dubiel/Development/CocoaTraining/HowToGoGit/HowToGoGit/How2Go copy-Info.plist"; sourceTree = "<absolute>"; };
 		D7BADC5515F52AAD0051A1C5 /* HowToGoGit.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = HowToGoGit.icns; sourceTree = "<group>"; };
+		D7C15AAC15F5486A002B24B4 /* How2Go.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = How2Go.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D715921515F545A0002CC464 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D715921615F545A0002CC464 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D7372AC915F13DDB001F5DA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,6 +57,7 @@
 		D7372AC115F13DDB001F5DA5 = {
 			isa = PBXGroup;
 			children = (
+				D7C15AAC15F5486A002B24B4 /* How2Go.icns */,
 				D7BADC5515F52AAD0051A1C5 /* HowToGoGit.icns */,
 				D7372AD615F13DDB001F5DA5 /* How2Go */,
 				D7372ACF15F13DDB001F5DA5 /* Frameworks */,
@@ -86,8 +70,7 @@
 		D7372ACD15F13DDB001F5DA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7372ACC15F13DDB001F5DA5 /* HowToGoGit Debug.app */,
-				D715921F15F545A0002CC464 /* How2Go Release.app */,
+				D7372ACC15F13DDB001F5DA5 /* How2Go.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,23 +141,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D715920F15F545A0002CC464 /* HowToGoGit Release */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D715921C15F545A0002CC464 /* Build configuration list for PBXNativeTarget "HowToGoGit Release" */;
-			buildPhases = (
-				D715921015F545A0002CC464 /* Sources */,
-				D715921515F545A0002CC464 /* Frameworks */,
-				D715921715F545A0002CC464 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HowToGoGit Release";
-			productName = HowToGoGit;
-			productReference = D715921F15F545A0002CC464 /* How2Go Release.app */;
-			productType = "com.apple.product-type.application";
-		};
 		D7372ACB15F13DDB001F5DA5 /* HowToGoGit Debug */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7372AEA15F13DDB001F5DA5 /* Build configuration list for PBXNativeTarget "HowToGoGit Debug" */;
@@ -189,7 +155,7 @@
 			);
 			name = "HowToGoGit Debug";
 			productName = HowToGoGit;
-			productReference = D7372ACC15F13DDB001F5DA5 /* HowToGoGit Debug.app */;
+			productReference = D7372ACC15F13DDB001F5DA5 /* How2Go.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -215,23 +181,11 @@
 			projectRoot = "";
 			targets = (
 				D7372ACB15F13DDB001F5DA5 /* HowToGoGit Debug */,
-				D715920F15F545A0002CC464 /* HowToGoGit Release */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D715921715F545A0002CC464 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D715921815F545A0002CC464 /* InfoPlist.strings in Resources */,
-				D715921915F545A0002CC464 /* Credits.rtf in Resources */,
-				D715921A15F545A0002CC464 /* MainMenu.xib in Resources */,
-				D715921B15F545A0002CC464 /* HowToGoGit.icns in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D7372ACA15F13DDB001F5DA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,17 +200,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D715921015F545A0002CC464 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D715921115F545A0002CC464 /* main.m in Sources */,
-				D715921215F545A0002CC464 /* CNX_AppDelegate.m in Sources */,
-				D715921315F545A0002CC464 /* CNX_ExtraCharges.m in Sources */,
-				D715921415F545A0002CC464 /* CNX_vehicleCalculator.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D7372AC815F13DDB001F5DA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,31 +241,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D715921D15F545A0002CC464 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HowToGoGit/How2Go-Prefix.pch";
-				INFOPLIST_FILE = "HowToGoGit Debug copy-Info.plist";
-				PRODUCT_NAME = "HowToGoGit Release";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		D715921E15F545A0002CC464 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HowToGoGit/How2Go-Prefix.pch";
-				INFOPLIST_FILE = "HowToGoGit Debug copy-Info.plist";
-				PRODUCT_NAME = "HowToGoGit Release";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		D7372AE815F13DDB001F5DA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -379,7 +297,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HowToGoGit/HowToGoGit-Prefix.pch";
 				INFOPLIST_FILE = "HowToGoGit/HowToGoGit-Info.plist";
-				PRODUCT_NAME = "HowToGoGit Debug";
+				PRODUCT_NAME = How2Go;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,7 +309,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HowToGoGit/HowToGoGit-Prefix.pch";
 				INFOPLIST_FILE = "HowToGoGit/HowToGoGit-Info.plist";
-				PRODUCT_NAME = "HowToGoGit Debug";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = How2Go;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -399,15 +318,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D715921C15F545A0002CC464 /* Build configuration list for PBXNativeTarget "HowToGoGit Release" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D715921D15F545A0002CC464 /* Debug */,
-				D715921E15F545A0002CC464 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D7372AC615F13DDB001F5DA5 /* Build configuration list for PBXProject "HowToGoGit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
