@@ -17,12 +17,11 @@
     double everageFuelConsumption;
     double distance;
     double fuelConsumption;
-    // double fare;
 }
 
 @property (assign) double ticketPrice, fuelPrice, everageFuelConsumption, distance;
 @property (readonly) double fuelConsumption;
 
--(double)calcFare:(BOOL)considerCharges withCharges:(CNX_ExtraCharges *)charges;
+-(double)calcFare:(bool)considerCharges withCharges:(CNX_ExtraCharges *)charges;
 
 @end

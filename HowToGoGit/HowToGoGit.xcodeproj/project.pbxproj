@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D707156B15F633FE00090E33 /* Car_256.png in Resources */ = {isa = PBXBuildFile; fileRef = D707156A15F633FE00090E33 /* Car_256.png */; };
+		D71DC22715F613B200438FED /* Bus_256.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DC22615F613B200438FED /* Bus_256.png */; };
 		D7372AD115F13DDB001F5DA5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7372AD015F13DDB001F5DA5 /* Cocoa.framework */; };
 		D7372ADB15F13DDB001F5DA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7372AD915F13DDB001F5DA5 /* InfoPlist.strings */; };
 		D7372ADD15F13DDB001F5DA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372ADC15F13DDB001F5DA5 /* main.m */; };
@@ -15,11 +17,13 @@
 		D7372AE715F13DDB001F5DA5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7372AE515F13DDB001F5DA5 /* MainMenu.xib */; };
 		D7372AF515F13F01001F5DA5 /* CNX_ExtraCharges.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AF215F13F01001F5DA5 /* CNX_ExtraCharges.m */; };
 		D7372AF615F13F01001F5DA5 /* CNX_vehicleCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D7372AF415F13F01001F5DA5 /* CNX_vehicleCalculator.m */; };
-		D7BADC5615F52AAD0051A1C5 /* HowToGoGit.icns in Resources */ = {isa = PBXBuildFile; fileRef = D7BADC5515F52AAD0051A1C5 /* HowToGoGit.icns */; };
+		D7CE406A15F54BE80014EFE5 /* How2Go.icns in Resources */ = {isa = PBXBuildFile; fileRef = D7C15AAC15F5486A002B24B4 /* How2Go.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D707156A15F633FE00090E33 /* Car_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car_256.png; sourceTree = "<group>"; };
 		D715922115F545A0002CC464 /* HowToGoGit Debug copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HowToGoGit Debug copy-Info.plist"; sourceTree = "<group>"; };
+		D71DC22615F613B200438FED /* Bus_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bus_256.png; path = ../Bus_256.png; sourceTree = "<group>"; };
 		D7372ACC15F13DDB001F5DA5 /* How2Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = How2Go.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7372AD015F13DDB001F5DA5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D7372AD315F13DDB001F5DA5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -38,8 +42,7 @@
 		D7372AF315F13F01001F5DA5 /* CNX_vehicleCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNX_vehicleCalculator.h; sourceTree = "<group>"; };
 		D7372AF415F13F01001F5DA5 /* CNX_vehicleCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNX_vehicleCalculator.m; sourceTree = "<group>"; };
 		D75BA74715F543600097451A /* How2Go copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "How2Go copy-Info.plist"; path = "/Users/dubiel/Development/CocoaTraining/HowToGoGit/HowToGoGit/How2Go copy-Info.plist"; sourceTree = "<absolute>"; };
-		D7BADC5515F52AAD0051A1C5 /* HowToGoGit.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = HowToGoGit.icns; sourceTree = "<group>"; };
-		D7C15AAC15F5486A002B24B4 /* How2Go.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = How2Go.icns; sourceTree = "<group>"; };
+		D7C15AAC15F5486A002B24B4 /* How2Go.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = How2Go.icns; path = ../How2Go.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +60,6 @@
 		D7372AC115F13DDB001F5DA5 = {
 			isa = PBXGroup;
 			children = (
-				D7C15AAC15F5486A002B24B4 /* How2Go.icns */,
-				D7BADC5515F52AAD0051A1C5 /* HowToGoGit.icns */,
 				D7372AD615F13DDB001F5DA5 /* How2Go */,
 				D7372ACF15F13DDB001F5DA5 /* Frameworks */,
 				D7372ACD15F13DDB001F5DA5 /* Products */,
@@ -133,6 +134,9 @@
 		D7372AF815F13F1F001F5DA5 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				D707156A15F633FE00090E33 /* Car_256.png */,
+				D71DC22615F613B200438FED /* Bus_256.png */,
+				D7C15AAC15F5486A002B24B4 /* How2Go.icns */,
 				D7372AE515F13DDB001F5DA5 /* MainMenu.xib */,
 			);
 			name = Ressources;
@@ -193,7 +197,9 @@
 				D7372ADB15F13DDB001F5DA5 /* InfoPlist.strings in Resources */,
 				D7372AE115F13DDB001F5DA5 /* Credits.rtf in Resources */,
 				D7372AE715F13DDB001F5DA5 /* MainMenu.xib in Resources */,
-				D7BADC5615F52AAD0051A1C5 /* HowToGoGit.icns in Resources */,
+				D7CE406A15F54BE80014EFE5 /* How2Go.icns in Resources */,
+				D71DC22715F613B200438FED /* Bus_256.png in Resources */,
+				D707156B15F633FE00090E33 /* Car_256.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

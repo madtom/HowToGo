@@ -17,11 +17,11 @@
     return self.everageFuelConsumption * self.distance / 100;
 }
 
--(double)calcFare:(BOOL)considerCharges withCharges:(CNX_ExtraCharges *)charges {
+-(double)calcFare:(bool)considerCharges withCharges:(CNX_ExtraCharges *)charges {
     
-    if (considerCharges == YES) {
+    if (considerCharges == TRUE) {
         
-        CNX_ExtraCharges *charges = [[CNX_ExtraCharges alloc] init];
+        // CNX_ExtraCharges *charges = [[CNX_ExtraCharges alloc] init];
         
         return self.fuelConsumption * self.fuelPrice + ( ( charges.chargesPerKM + charges.deprication ) * self.distance );
     }
