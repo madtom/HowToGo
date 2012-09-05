@@ -10,24 +10,41 @@
 
 @implementation CNX_vehicleCalculator
 
-@synthesize ticketPrice, fuelPrice, everageFuelConsumption, distance;
+@synthesize ticketPrice, fuelPrice, averageFuelConsumption, distance;
 @synthesize fuelConsumption;
 
 -(double)fuelConsumption {
-    return self.everageFuelConsumption * self.distance / 100;
+    return self.averageFuelConsumption * self.distance / 100;
 }
 
 -(double)calcFare:(bool)considerCharges withCharges:(CNX_ExtraCharges *)charges {
     
     if (considerCharges == TRUE) {
         
-        // CNX_ExtraCharges *charges = [[CNX_ExtraCharges alloc] init];
-        
         return self.fuelConsumption * self.fuelPrice + ( ( charges.chargesPerKM + charges.deprication ) * self.distance );
     }
     else {
         return self.fuelConsumption * self.fuelPrice;
     }
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeDouble:ticketPrice forKey:@"ticketPrice"];
+    [aCoder encodeDouble:fuelPrice forKey:@"fuelPrice"];
+    [aCoder encodeDouble:averageFuelConsumption forKey:@"averageFuelConsumption"];
+    [aCoder encodeDouble:distance forKey:@"distance"];
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    // initialization of parent class
+    if (![super init]) return nil;
+    
+    // read attributes from archive
+    [self setTicketPrice:[aDecoder decodeDoubleForKey:@"ticketPrice"]];
+    [self setFuelPrice:[aDecoder decodeDoubleForKey:@"fuelPrice"]];
+    [self setAverageFuelConsumption:[aDecoder decodeDoubleForKey:@"averageFuelConsumption"]];
+    [self setDistance:[aDecoder decodeDoubleForKey:@"distance"]];
+    return self;
 }
 
 @end

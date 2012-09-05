@@ -9,19 +9,23 @@
 #import <Foundation/Foundation.h>
 #import "CNX_ExtraCharges.h"
 
-@interface CNX_vehicleCalculator : NSObject {
+@interface CNX_vehicleCalculator : NSObject <NSCoding> {
     
     // Instanzvariablen
     double ticketPrice;
     double fuelPrice;
-    double everageFuelConsumption;
+    double averageFuelConsumption;
     double distance;
     double fuelConsumption;
 }
 
-@property (assign) double ticketPrice, fuelPrice, everageFuelConsumption, distance;
+@property (assign) double ticketPrice, fuelPrice, averageFuelConsumption, distance;
 @property (readonly) double fuelConsumption;
 
 -(double)calcFare:(bool)considerCharges withCharges:(CNX_ExtraCharges *)charges;
+
+// Protokollmethoden
+-(void)encodeWithCoder:(NSCoder *)aCoder;
+-(id)initWithCoder:(NSCoder *)aDecoder;
 
 @end

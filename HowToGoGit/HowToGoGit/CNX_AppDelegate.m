@@ -67,22 +67,37 @@
     fileCar = [NSString stringWithFormat:@"%@/%@.app/Contents/Resources/Car_256.png", path, app];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+-(void)openArchives:(NSFileManager *)fileManager {
+    // get Application Support path
     NSString *appSupport = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    // build path for archive files
     NSString *dir = [NSString stringWithFormat:@"%@/HowToGo", appSupport];
-    NSString *fileName = [dir stringByAppendingPathComponent:@"ExtraCharges.plist"];
-    BOOL exist = [fileManager fileExistsAtPath:fileName];
-    if ( exist == YES) {
-        charges = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
+    // build file names for vehicle and charges archive
+    NSString *fileNameCharges = [dir stringByAppendingPathComponent:@"ExtraCharges.plist"];
+    NSString *fileNameVehicle = [dir stringByAppendingPathComponent:@"VehicleCalculation.plist"];
+    BOOL chargesExist = [fileManager fileExistsAtPath:fileNameCharges];
+    BOOL vehicleExist = [fileManager fileExistsAtPath:fileNameVehicle];
+    // if file exist, load data otherwise create a new empty object instance
+    if ( chargesExist == YES) {
+        charges = [NSKeyedUnarchiver unarchiveObjectWithFile:fileNameCharges];
     }
     else {
         charges = [CNX_ExtraCharges new];
     }
     
-    calculator = [CNX_vehicleCalculator new];
+    if (vehicleExist == YES) {
+        calculator = [NSKeyedUnarchiver unarchiveObjectWithFile:fileNameVehicle];
+    }
+    else {
+        calculator = [CNX_vehicleCalculator new];
+    }
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    // Insert code here to initialize your application
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [self openArchives:fileManager];
     
     // fill view with class variables
     [kaufpreis setDoubleValue:charges.carPrice];
@@ -99,25 +114,70 @@
     
     // fill initial values into calculation attributes
     [ergebnisText setStringValue:@""];
+    [fahrPreis setDoubleValue:calculator.ticketPrice];
+    [benzinPreis setDoubleValue:calculator.fuelPrice];
+    [entfernung setDoubleValue:calculator.distance];
+    [durchschnittVerbrauch setDoubleValue:calculator.averageFuelConsumption];
     
     // prepare pictures
     [self prepareIcons:fileManager];
+    
+    [self calcValueChanged:self];
+}
+
+-(BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+    return TRUE;
 }
 
 -(NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
-    // speichern der Daten
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *appSupport = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *dir = [NSString stringWithFormat:@"%@/HowToGo", appSupport];
-    [fileManager createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
-    NSString *fileName = [dir stringByAppendingPathComponent:@"ExtraCharges.plist"];
-    BOOL result = [NSKeyedArchiver archiveRootObject:charges toFile:fileName];
     
-    if (result == YES) {
-        return NSTerminateNow;
-    }
-    else {
-        return NSTerminateCancel;
+    NSInteger button = NSRunAlertPanel(@"How2Go", @"Wollen Sie die eigetragenen Daten sichern?", @"Ja", @"Löschen", @"Nein");
+    
+    switch (button) {
+        case 1: {  // Ja
+            // create a new file manager instance
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            // get Application Support path
+            NSString *appSupport = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+            // build path for archive files and create if not exist
+            NSString *dir = [NSString stringWithFormat:@"%@/HowToGo", appSupport];
+            [fileManager createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
+            // build file names for vehicle and charges archive
+            NSString *fileNameCharges = [dir stringByAppendingPathComponent:@"ExtraCharges.plist"];
+            NSString *fileNameVehicle = [dir stringByAppendingPathComponent:@"VehicleCalculation.plist"];
+    
+            // save data to archive
+            BOOL resultCharges = [NSKeyedArchiver archiveRootObject:charges toFile:fileNameCharges];
+            BOOL resultVehicle = [NSKeyedArchiver archiveRootObject:calculator toFile:fileNameVehicle];
+            if (resultCharges == YES && resultVehicle == YES) {
+                return NSTerminateNow;
+            }
+            else {
+                return NSTerminateCancel;
+            }
+            break;
+        }
+        case 0: {  // Löschen
+            // create a new file manager instance
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            // get Application Support path
+            NSString *appSupport = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+            // build path for archive files and create if not exist
+            NSString *dir = [NSString stringWithFormat:@"%@/HowToGo", appSupport];
+            [fileManager createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
+            // build file names for vehicle and charges archive
+            NSString *fileNameCharges = [dir stringByAppendingPathComponent:@"ExtraCharges.plist"];
+            NSString *fileNameVehicle = [dir stringByAppendingPathComponent:@"VehicleCalculation.plist"];
+            
+            [fileManager removeItemAtPath:fileNameVehicle error:nil];
+            [fileManager removeItemAtPath:fileNameCharges error:nil];
+
+            return NSTerminateNow;
+        }
+        default: {  // Nein
+            return NSTerminateNow;
+        }
+            
     }
 }
 
@@ -133,6 +193,7 @@
     [wvJeKm setDoubleValue:charges.deprication];
     [nkJeKm setDoubleValue:charges.chargesPerKM];
     [kostenJeKm setDoubleValue:[self kostenProKM]];
+    [self calcValueChanged:self];
 }
 - (IBAction)calcValueChanged:(id)sender {
     // get values from view and store in class variables
@@ -143,11 +204,11 @@
     [calculator setTicketPrice:ticketPrice];
     [calculator setFuelPrice:fuelPrice];
     [calculator setDistance:distance];
-    [calculator setEverageFuelConsumption:avFuelConsumption];
+    [calculator setAverageFuelConsumption:avFuelConsumption];
     
     double fare = [calculator calcFare:[checkAlleKosten state] withCharges:charges];
     
-    if ( ticketPrice == 0 || fuelPrice == 0 || entfernung == 0 || avFuelConsumption == 0) {
+    if ( ticketPrice == 0 || fuelPrice == 0 || distance == 0 || avFuelConsumption == 0) {
         [verbrauchBenzin setStringValue:@""];
         [kostenFahrt setDoubleValue:0];
         [ergebnisText setStringValue:@""];
