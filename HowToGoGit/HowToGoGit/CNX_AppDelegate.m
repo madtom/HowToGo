@@ -71,7 +71,7 @@
     // get Application Support path
     NSString *appSupport = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     // build path for archive files
-    NSString *dir = [NSString stringWithFormat:@"%@/HowToGo", appSupport];
+    NSString *dir = [NSString stringWithFormat:@"%@/How2Go", appSupport];
     // build file names for vehicle and charges archive
     NSString *fileNameCharges = [dir stringByAppendingPathComponent:@"ExtraCharges.plist"];
     NSString *fileNameVehicle = [dir stringByAppendingPathComponent:@"VehicleCalculation.plist"];
@@ -98,6 +98,7 @@
     // Insert code here to initialize your application
     NSFileManager *fileManager = [NSFileManager defaultManager];
     [self openArchives:fileManager];
+    messageSowed = NO;
     
     // fill view with class variables
     [kaufpreis setDoubleValue:charges.carPrice];
@@ -131,7 +132,7 @@
 
 -(NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
     
-    NSInteger button = NSRunAlertPanel(@"How2Go", @"Wollen Sie die eigetragenen Daten sichern?", @"Ja", @"Löschen", @"Nein");
+    NSInteger button = NSRunAlertPanel(@"How2Go", @"Wollen Sie die eigetragenen Daten sichern?", @"Ja", @"Gespeicherte Löschen", @"Nein");
     
     switch (button) {
         case 1: {  // Ja
@@ -140,7 +141,7 @@
             // get Application Support path
             NSString *appSupport = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
             // build path for archive files and create if not exist
-            NSString *dir = [NSString stringWithFormat:@"%@/HowToGo", appSupport];
+            NSString *dir = [NSString stringWithFormat:@"%@/How2Go", appSupport];
             [fileManager createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
             // build file names for vehicle and charges archive
             NSString *fileNameCharges = [dir stringByAppendingPathComponent:@"ExtraCharges.plist"];
@@ -163,7 +164,7 @@
             // get Application Support path
             NSString *appSupport = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
             // build path for archive files and create if not exist
-            NSString *dir = [NSString stringWithFormat:@"%@/HowToGo", appSupport];
+            NSString *dir = [NSString stringWithFormat:@"%@/How2Go", appSupport];
             [fileManager createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
             // build file names for vehicle and charges archive
             NSString *fileNameCharges = [dir stringByAppendingPathComponent:@"ExtraCharges.plist"];
@@ -195,6 +196,14 @@
     [kostenJeKm setDoubleValue:[self kostenProKM]];
     [self calcValueChanged:self];
 }
+
+- (IBAction)allCostsChanged:(id)sender {
+    if ([checkAlleKosten state] == TRUE && messageSowed == YES) {
+        messageSowed = NO;
+    }
+    [self calcValueChanged:self];
+}
+
 - (IBAction)calcValueChanged:(id)sender {
     // get values from view and store in class variables
     double ticketPrice = [fahrPreis doubleValue];
@@ -205,6 +214,11 @@
     [calculator setFuelPrice:fuelPrice];
     [calculator setDistance:distance];
     [calculator setAverageFuelConsumption:avFuelConsumption];
+    
+    if ( charges.chargesPerKM == 0 && avFuelConsumption != 0 && messageSowed == NO) {
+        NSRunAlertPanel(@"How2Go", @"Es wurden noch keine Nebenkosten erfasst. Daher können sie auch nicht bei der Berechnung berücksichtigt werden!", @"OK", nil, nil);
+        messageSowed = YES;
+    }
     
     double fare = [calculator calcFare:[checkAlleKosten state] withCharges:charges];
     
@@ -230,6 +244,5 @@
         }
     [imageField setImage:bild];
     }
-    
 }
 @end

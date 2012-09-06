@@ -15,6 +15,7 @@
     CNX_vehicleCalculator *calculator;
     NSString *fileBus;
     NSString *fileCar;
+    BOOL messageSowed;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -48,5 +49,6 @@
 @property (weak) IBOutlet NSFormCell *kostenJeKm;
 
 - (IBAction)valueChanged:(id)sender;
+- (IBAction)allCostsChanged:(id)sender;
 
 @end
