@@ -51,4 +51,9 @@
 - (IBAction)valueChanged:(id)sender;
 - (IBAction)allCostsChanged:(id)sender;
 
+// Outlets for testing
+@property (weak) IBOutlet NSTextField *testPathBus;
+@property (weak) IBOutlet NSTextField *testPathCar;
+@property (weak) IBOutlet NSTextField *testfileManagerPath;
+
 @end

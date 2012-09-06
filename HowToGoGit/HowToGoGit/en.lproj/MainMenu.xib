@@ -397,7 +397,7 @@
 				<string key="NSName">_NSMainMenu</string>
 			</object>
 			<object class="NSWindowTemplate" id="972006081">
-				<int key="NSWindowStyleMask">15</int>
+				<int key="NSWindowStyleMask">7</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{335, 390}, {684, 511}}</string>
 				<int key="NSWTFlags">1954021376</int>
@@ -405,7 +405,8 @@
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
-				<string key="NSWindowContentMinSize">{400, 511}</string>
+				<string key="NSWindowContentMaxSize">{684, 511}</string>
+				<string key="NSWindowContentMinSize">{684, 511}</string>
 				<object class="NSView" key="NSWindowView" id="439893737">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -1878,8 +1879,8 @@
 					<reference key="NSNextKeyView" ref="312840208"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
-				<string key="NSMinSize">{400, 533}</string>
-				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
+				<string key="NSMinSize">{684, 533}</string>
+				<string key="NSMaxSize">{684, 533}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomObject" id="976324537">
@@ -3303,7 +3304,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">793</int>
+			<int key="maxID">802</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3346,6 +3347,9 @@
 						<string key="nutzungszeit">NSFormCell</string>
 						<string key="steuer">NSFormCell</string>
 						<string key="summeNebenkosten">NSFormCell</string>
+						<string key="testPathBus">NSTextField</string>
+						<string key="testPathCar">NSTextField</string>
+						<string key="testfileManagerPath">NSTextField</string>
 						<string key="verbrauchBenzin">NSTextField</string>
 						<string key="versicherung">NSFormCell</string>
 						<string key="wartung">NSFormCell</string>
@@ -3416,6 +3420,18 @@
 						<object class="IBToOneOutletInfo" key="summeNebenkosten">
 							<string key="name">summeNebenkosten</string>
 							<string key="candidateClassName">NSFormCell</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="testPathBus">
+							<string key="name">testPathBus</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="testPathCar">
+							<string key="name">testPathCar</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="testfileManagerPath">
+							<string key="name">testfileManagerPath</string>
+							<string key="candidateClassName">NSTextField</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="verbrauchBenzin">
 							<string key="name">verbrauchBenzin</string>

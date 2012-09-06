@@ -9,6 +9,9 @@
 #import "CNX_AppDelegate.h"
 
 @implementation CNX_AppDelegate
+@synthesize testPathBus;
+@synthesize testPathCar;
+@synthesize testfileManagerPath;
 
 @synthesize fahrPreis;
 @synthesize benzinPreis;
@@ -57,14 +60,9 @@
 }
 
 -(void)prepareIcons:(NSFileManager *)fileManager {
-    // get handle of File Manager and get current path
-    NSString *path = [fileManager currentDirectoryPath];
-    // get name of bundle => application name
-    NSString *app = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
-    
-    // set bus picture to attribute
-    fileBus = [NSString stringWithFormat:@"%@/%@.app/Contents/Resources/Bus_256.png", path, app];
-    fileCar = [NSString stringWithFormat:@"%@/%@.app/Contents/Resources/Car_256.png", path, app];
+    // get path of Ressources for car and bus icon
+    fileBus = [[NSBundle mainBundle] pathForResource:@"Bus_256" ofType:@"png"];
+    fileCar = [[NSBundle mainBundle] pathForResource:@"Car_256" ofType:@"png"];
 }
 
 -(void)openArchives:(NSFileManager *)fileManager {
@@ -240,7 +238,7 @@
         }
         else {
             bild = [[NSImage alloc] initWithContentsOfFile:fileBus];
-            [ergebnisText setStringValue:@"Nimm den Bus!"];
+            [ergebnisText setStringValue:@"Nimm die Öffentlichen!"];
         }
     [imageField setImage:bild];
     }
