@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D7372ACB15F13DDB001F5DA5 /* HowToGoGit Debug */ = {
+		D7372ACB15F13DDB001F5DA5 /* HowToGoGit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7372AEA15F13DDB001F5DA5 /* Build configuration list for PBXNativeTarget "HowToGoGit Debug" */;
+			buildConfigurationList = D7372AEA15F13DDB001F5DA5 /* Build configuration list for PBXNativeTarget "HowToGoGit" */;
 			buildPhases = (
 				D7372AC815F13DDB001F5DA5 /* Sources */,
 				D7372AC915F13DDB001F5DA5 /* Frameworks */,
@@ -157,7 +157,7 @@
 			);
 			dependencies = (
 			);
-			name = "HowToGoGit Debug";
+			name = HowToGoGit;
 			productName = HowToGoGit;
 			productReference = D7372ACC15F13DDB001F5DA5 /* How2Go.app */;
 			productType = "com.apple.product-type.application";
@@ -184,7 +184,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7372ACB15F13DDB001F5DA5 /* HowToGoGit Debug */,
+				D7372ACB15F13DDB001F5DA5 /* HowToGoGit */,
 			);
 		};
 /* End PBXProject section */
@@ -269,7 +269,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -291,7 +291,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -333,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7372AEA15F13DDB001F5DA5 /* Build configuration list for PBXNativeTarget "HowToGoGit Debug" */ = {
+		D7372AEA15F13DDB001F5DA5 /* Build configuration list for PBXNativeTarget "HowToGoGit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7372AEB15F13DDB001F5DA5 /* Debug */,
